@@ -15,12 +15,12 @@ Below is a highly detailed technical diagram showcasing the hybrid propulsion sy
 - Electric Motor with integrated quantum components
 - Advanced thermal and vibration shielding layers
 
-![Hybrid Propulsion System](path/to/your/image1.png)
+![Hybrid Propulsion System](images/technical_ideas/40707c9c-9ea6-4d57-b359-fd2848096b8d.jpeg)
 
 ### Alternative Diagram with Focus on Quantum Components
 A more specific design focused on Josephson Junctions, resonant cavities, and quantum signal processing in a modular layout.
 
-![Quantum Components](path/to/your/image2.png)
+![Quantum Components](images/technical_ideas/Captura de pantalla 2025-01-23 213147.png)
 
 ---
 
@@ -44,4 +44,5 @@ A more specific design focused on Josephson Junctions, resonant cavities, and qu
 1. Clone the repository:  
    ```bash
    git clone https://github.com/yourusername/Hybrid-Propulsion-System.git
+
 

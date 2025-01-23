@@ -1,0 +1,35 @@
+//constraint.xdc
+//LEDS_constraint_file
+
+## switches
+set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports {SWITCH[0]}];
+
+set_property -dict {PACKAGE_PIN L16 IOSTANDARD LVCMOS33} [get_ports {SWITCH[1]}];
+
+set_property -dict {PACKAGE_PIN M13 IOSTANDARD LVCMOS33} [get_ports {SWITCH[2]}];
+
+set_property -dict {PACKAGE_PIN R15 IOSTANDARD LVCMOS33} [get_ports {SWITCH[3]}];
+
+# cathodes
+set_property -dict {PACKAGE_PIN T10 IOSTANDARD LVCMOS33} [get_ports {SEGMENT[6]}];
+
+set_property -dict {PACKAGE_PIN R10 IOSTANDARD LVCMOS33} [get_ports {SEGMENT[5]}];
+
+set_property -dict {PACKAGE_PIN K16 IOSTANDARD LVCMOS33} [get_ports {SEGMENT[4]}];
+
+set_property -dict {PACKAGE_PIN K13 IOSTANDARD LVCMOS33} [get_ports {SEGMENT[3]}];
+
+set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports {SEGMENT[2]}];
+
+set_property -dict {PACKAGE_PIN T11 IOSTANDARD LVCMOS33} [get_ports {SEGMENT[1]}];
+
+set_property -dict {PACKAGE_PIN L18 IOSTANDARD LVCMOS33} [get_ports {SEGMENT[0]}];
+
+# anodes
+set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports {SWITCH[0]}];
+set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports {SWITCH[0]}];
+set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports {SWITCH[0]}];
+set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports {SWITCH[0]}];
+set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports {SWITCH[0]}];
+set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports {SWITCH[0]}];
+set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports {SWITCH[0]}];

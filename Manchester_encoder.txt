@@ -1,0 +1,41 @@
+//Manchester_encoder 
+Library ieee;
+ Use ieee.std_logic_1664.all;
+ Entity Manchester_encoder is
+ Port (
+ Clk : in std_logic;
+ D : in std_logic;
+ Q : out std_logic
+ );
+ End entity Manchester_encoder;
+ Architecture basic of Manchester_encoder is
+ Signal lastd : std_logic := '0';
+ Begin
+ P1: Process ( clk )
+ Begin
+ If rising_edge(clk) then
+ if ( d = '0' ) then
+ Q <= '1';
+ Lastd <= '0';
+ elsif ( d = '1' ) then
+ Q <= '0';
+ Lastd <= '1';
+
+Else
+ Q <= 'X';
+ Lastd <= 'X';
+ End if;
+ End if;
+ If falling_edge(clk) then
+ If ( lastd = '0' ) then
+ Q <= '0';
+ elsif ( lastd = '1' ) then
+ Q <= '1';
+ Else
+ Q <= 'X';
+ End if
+ End if;
+ End process p1;
+ End architecture basic;
+
+//me quede en la pagina 108 para el diseño de un encoder en VHDL para artix 7 o Zybo R, falta versatilidad

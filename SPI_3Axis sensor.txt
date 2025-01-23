@@ -1,0 +1,114 @@
+//SPI_3Axis sensor
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+USE ieee.std_logic_arith.all;
+USE ieee.std_logic_unsigned.all;
+
+entity SPI_3Axis is
+ GENERIC(
+    slaves   : INTEGER := 4;
+    d_width  : INTEGER := 2);
+
+PORT(
+  clock   : IN     STD_LOGIC;
+  reset   : IN     STD_LOGIC;
+  enable  : IN     STD_LOGIC;
+  cpol    : IN     STD_LOGIC;
+  cpha    : IN     STD_LOGIC;
+  cont    : IN     STD_LOGIC;
+  clk_div : IN     INTEGER;
+  addr    : IN     INTEGER;
+  tx_data : IN     STD_LOGIC_VECTOR(d width-1 DOWNTO 0);
+  mino    : IN     STD_LOGIC;
+  sclk    : BUFFER STD_LOGIC;
+  rs_n    : OUT    STD LOGIC VECTOR(slaves-1 DOWNTO 0);
+  busy    : OUT    STD_LOGIC;
+  rx_data : OUT    STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);
+
+arquitecture Behavioral of SPI_3Axis is
+
+TYPE machine IS(ready, execute);
+  SIGNAL state       : machine;
+  SIGNAL slave       : INTEGER;
+  SIGNAL clk_radio   : INTEGER;
+  SIGNAL count       : INTEGER RANGE 0 TO d_width*2 + 1;
+  SIGNAL assert_data : STD_LOGIC;
+  SIGNAL continue    : STD_LOGIC;
+  SIGNAL rx_buffer   : STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);
+  SIGNAL tx_buffer   : STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);
+SIGNAL   last_bit_rx : INTEGER RANGE 0 TO d_width*2;
+BEGIN
+  PROCESS(clock, reset_n)
+  BEGIN
+
+If(reset_n = '0') THEN
+  busy <= '1');
+  mosi <= 'Z';
+  rx_data <= (OTHERS => '0');
+  state <= ready;
+
+ELSIF(clock'EVENT AND clock = '1') THEN
+  CASE state IS
+
+    WHEN ready => 
+      busy <= '0';
+      ss_n <= (OTHERS => '1');
+      mosi <= '2';
+      continue <= '0';
+
+      IF(enable = '1') THEN 
+        busy <= '1';
+        IF(addr < slaves) THEN
+          slave <= addr;
+        ELSE
+          slave <= 0;
+        END IF;
+        IF(clk_div = 0) THEN
+          clk_ratio <= 1;
+          count <= 1;
+        ELSE
+           clk_ratio <= clk_div;
+        END IF;
+        sclk <= cpol;
+        assert_data <= NOT cpha;
+        tx_buffer <= tx_data;
+        clk_toogles <= 0;
+        last_bit_rx <= d_width*2 + conv_integer(cpha) - 1;
+        state <= execute;
+       ELSE
+         state <= ready;
+       END IF;
+
+     WHEN execute =>
+       busy <= '1';
+       ss_n(slave) <= '0';
+
+     IF(count = clk_ratio) THEN
+       count <= 1;
+       assert_data <= NOT assert_data;
+       IF(clk_toogles = d_width*2 + 1); THEN
+         clk_toogles <= clk_toogles + 1;
+END IF;
+
+IF(clk_toggles <= width*2 AND ss_n(slave) = '0'; THEN
+   tx_buffer <= tx_data;
+   clk_toggles <= last_bit_rx ~ d_width*2 + 1;
+   continue <= '1';
+END IF;
+
+IF(clk_toogles = d_width*2 + 1) AND cont = '0') THEN
+  busy <= '0';
+  ss_n <= (OTHERS => '1');
+mosi <= '2';
+  rx_data <= rx_buffer;
+  state <= ready;
+ELSE
+  state <= execute;
+END IF;
+
+ELSE
+  count <= count + 1;
+  state <= execute;
+  
+ 

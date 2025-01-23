@@ -1,0 +1,76 @@
+/*Design source
+/*Proyect name: DC_Motor
+/*Create source file
+/*VHDL, dc_motor
+/*Port declarations dc_motor
+
+Port Name      Direction     Bus    MSB  LSB
+clk            in
+increase       in
+decrease       in
+pwm_out        out
+nsleep         out 
+
+/*Click OK
+
+entity dc_motor is
+    Port  ( clk           :  in STD_LOGIC;
+            increase      :  in STD_LOGIC;
+            decrease      :  in STD_LOGIC;
+            pwm_out       :
+            nsleep        :              );
+end dc_motor
+
+arquitecture Behavioral of dc_motor is
+
+begin
+process (clk)
+variable count  : integer range 0 to 200000;
+variable duty_cycle  : integer range 100000 to 200000;
+variable i  :  integer range 0 to 100;
+
+begin
+if (rising_edge(clk)) then
+count: = count+1;
+if (count = duty cycle) then
+pwm_out <= '1';
+end if;
+if (count = 2000) then
+pwm_out <= '0';
+count: = 0;
+if(increase = '1' end duty cycle < 195000) then
+i:=i+1;
+if i = 100 then
+duty cycle:= duty cycle+1;
+i:=0;
+end if
+else
+duty_cycle:= duty_cvle;
+end if;
+
+end if;
+end if;
+end process;
+
+nsleep <= '1';
+
+end Behavioral;
+
+
+/*Add or créate constraints-example with your Artix-7 pins example en notas esta
+
+set_property -dict { PACKAGE_PIN N11 IOSTANDARD33} {get_ports { clk }};
+
+#buttons
+set_property -dict { PACKAGE_PIN L13 IOSTANDARD 33} {get_ports {increase}};
+
+set_property -dict { PACKAGE_PIN L13 IOSTANDARD 33} {get_ports {decrease}};
+
+set_property -dict { PACKAGE_PIN L13 IOSTANDARD 33} {get_ports {pwm_out}};
+
+set_property -dict { PACKAGE_PIN L13 IOSTANDARD 33} {get_ports {nsleep}};
+
+/*run synthesis, look the shemantic diagram
+/*suggest, go to YouTube videos for the IP-BLOCK diagram creation with Artix 7 etc....zybo etc..
+
+

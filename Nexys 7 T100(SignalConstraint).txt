@@ -1,0 +1,12 @@
+//Nexys 7 T100, clocks cycles 0.5% -> 5000 -> 250*2
+//constraint.xdc
+
+set_property PACKAGE_PIN E3 [get_ports {CLK}];
+create_clock -name sysclk -period 10  -waveform {0 5} [get_ports {CLK}];
+
+set_property PACKAGE_PIN H4 [get_ports {SIGNAL}];
+set_property IOSTANDARD LVCMOS33 [get_ports {SIGNAL}];
+
+
+
+

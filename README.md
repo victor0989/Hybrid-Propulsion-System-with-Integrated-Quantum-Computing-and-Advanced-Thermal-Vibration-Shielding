@@ -45,5 +45,12 @@ A more specific design focused on Josephson Junctions, resonant cavities, and qu
    ```bash
    git clone https://github.com/yourusername/Hybrid-Propulsion-System.git
 
+### Requirements
+To work with this project, you may need to install **Qiskit Metal** if you're interested in designing quantum components like resonators or other devices. This can be used in combination with the design of electric motors for rockets, offering a unique perspective on integrating quantum designs with propulsion systems.
+
+To install Qiskit Metal, you can use the following command:
+
+```bash
+pip install qiskit-metal
 
 

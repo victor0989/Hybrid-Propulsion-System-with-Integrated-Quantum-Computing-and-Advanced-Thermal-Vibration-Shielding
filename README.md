@@ -39,6 +39,11 @@ A more specific design focused on Josephson Junctions, resonant cavities, and qu
 - Advanced sensor integration for space exploration.
 
 ---
+## Important design-concepts links
+
+- **Resonator Design Example**: [Enlace a la página de Qiskit Metal](https://qiskit-community.github.io/qiskit-metal/circuit-examples/B.Resonators/11-Resonator_Meander.html)
+- **Electric Motor Simulation and Design Guide**: [Enlace al artículo de SimScale](https://www.simscale.com/blog/electric-motor-simulation-and-design/)
+
 
 ## How to Use
 1. Clone the repository:  

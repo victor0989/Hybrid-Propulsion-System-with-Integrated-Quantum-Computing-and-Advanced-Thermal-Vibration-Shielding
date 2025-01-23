@@ -43,6 +43,8 @@ A more specific design focused on Josephson Junctions, resonant cavities, and qu
 
 - **Resonator Design Example**: [Enlace a la página de Qiskit Metal](https://qiskit-community.github.io/qiskit-metal/circuit-examples/B.Resonators/11-Resonator_Meander.html)
 - **Electric Motor Simulation and Design Guide**: [Enlace al artículo de SimScale](https://www.simscale.com/blog/electric-motor-simulation-and-design/)
+- **Sensors**: [RLS Linear Sensors](https://www.rls.si/eng/linear?msclkid=9ba32184f91f1cd90b5946164d378733&utm_source=bing&utm_medium=cpc&utm_campaign=Europe%20%20-%20Linear%20encoders&utm_term=linear%20sensors&utm_content=Linear%20sensors)
+
 
 
 ## How to Use

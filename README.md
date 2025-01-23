@@ -20,8 +20,6 @@ Below is a highly detailed technical diagram showcasing the hybrid propulsion sy
 ### Alternative Diagram with Focus on Quantum Components
 A more specific design focused on Josephson Junctions, resonant cavities, and quantum signal processing in a modular layout.
 
-![Quantum Components](images/technical_ideas/Captura_de_pantalla_2025-01-23213147.png)
-
 ---
 
 ## Features

@@ -60,4 +60,14 @@ To install Qiskit Metal, you can use the following command:
 ```bash
 pip install qiskit-metal
 
+---
+
+Other Notes
+Reference PDF:
+Semiconductor-Superconductor Josephson Junctions in the Presence of Zeeman and Spin-Orbit Fields by Christian Baumgartner.
+
+Documentation Needs:
+Integration of electric motors and CPW resonator chips in aviation environments requires compliance and aviation documentation support. Ensure you collect and reference the necessary standards and certifications when working with these systems.
+
+Intel i9 processor needed!
 

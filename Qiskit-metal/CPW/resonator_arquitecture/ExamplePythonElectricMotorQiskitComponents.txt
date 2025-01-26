@@ -1,0 +1,80 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from qiskit import QuantumCircuit, Aer, execute
+
+# ---- MOTOR COMPONENT CLASSES ----
+class Rotor:
+    def __init__(self, slots, material):
+        self.slots = slots
+        self.material = material
+
+    def info(self):
+        return f"Rotor with {self.slots} slots made of {self.material}"
+
+class Stator:
+    def __init__(self, windings, material):
+        self.windings = windings
+        self.material = material
+
+    def info(self):
+        return f"Stator with {self.windings} windings made of {self.material}"
+
+class Bearing:
+    def __init__(self, type):
+        self.type = type
+
+    def info(self):
+        return f"Bearing type: {self.type}"
+
+class SlipRing:
+    def __init__(self, material):
+        self.material = material
+
+    def info(self):
+        return f"Slip ring made of {self.material}"
+
+# ---- QUANTUM CHIP CLASS ----
+class QuantumProcessor:
+    def __init__(self, qubits):
+        self.qubits = qubits
+        self.circuit = QuantumCircuit(qubits)
+
+    def add_gate(self, gate, target):
+        if gate == 'H':
+            self.circuit.h(target)
+        elif gate == 'X':
+            self.circuit.x(target)
+
+    def simulate(self):
+        simulator = Aer.get_backend('statevector_simulator')
+        result = execute(self.circuit, simulator).result()
+        statevector = result.get_statevector()
+        return statevector
+
+# ---- ASSEMBLE SYSTEM ----
+# Motor components
+rotor = Rotor(slots=24, material="Copper")
+stator = Stator(windings=36, material="Iron")
+bearing = Bearing(type="Ball bearing")
+slip_ring = SlipRing(material="Copper")
+
+# Quantum chip
+quantum_chip = QuantumProcessor(qubits=2)
+quantum_chip.add_gate('H', 0)
+quantum_chip.add_gate('X', 1)
+
+# ---- OUTPUT INFORMATION ----
+def main():
+    # Motor Info
+    print("Motor Components:")
+    print(rotor.info())
+    print(stator.info())
+    print(bearing.info())
+    print(slip_ring.info())
+
+    # Quantum Chip Simulation
+    print("\nQuantum Chip Simulation:")
+    print("Initial statevector:", quantum_chip.simulate())
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,33 @@
+Qubits
+Single Transmon - Grounded (xmon)
+A transmon qubit
+Closing the Qiskit Metal GUI
+Single Transmon - Floating
+A transmon qubit
+Closing the Qiskit Metal GUI
+Concentric Transmon
+A Concentric Transmon
+Closing the Qiskit Metal GUI
+Interdigitated Transmon Qubits
+Closing the Qiskit Metal GUI
+Single Transmon - Grounded (xmon) flux lines
+A transmon qubit with flux lines
+Closing the Qiskit Metal GUI
+Single Transmon - Floating with 6 connection pads
+A transmon qubit with 6 connection pads
+Closing the Qiskit Metal GUI
+Single Transmon - Floating with charge lines
+A transmon qubit
+Closing the Qiskit Metal GUI
+Josephson Junction (Dolan)
+A dolan style josephson junction
+Closing the Qiskit Metal GUI
+Josephson Junction (Manhattan)
+A manhattan style josephson junction
+Closing the Qiskit Metal GUI
+Single Transmon - Floating with teeth
+A transmon qubit with teeth
+Closing the Qiskit Metal GUI
+Star shaped qubit
+A Star Qubit
+Closing the Qiskit Metal GUI

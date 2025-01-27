@@ -55,6 +55,10 @@ A more specific design focused on Josephson Junctions, resonant cavities, and qu
 ### Requirements
 To work with this project, you may need to install **Qiskit Metal** if you're interested in designing quantum components like resonators or other devices. This can be used in combination with the design of electric motors for rockets, offering a unique perspective on integrating quantum designs with propulsion systems.
 
+## Visualizations  
+### Dark Energy Quantum Motor  
+![Dark Energy Quantum Motor](images/Captura%20de%20pantalla%202025-01-27%20215546.png)
+
 To install Qiskit Metal, you can use the following command:
 
 ```bash
@@ -88,11 +92,6 @@ This second project explores a **Riemann Tensor-Based Engine** for advanced quan
 - Faster-than-light propulsion.  
 - Quantum energy generation for sustainable power.  
 - Advanced exploration of spacetime and quantum phenomena.  
-
-## Visualizations  
-### Dark Energy Quantum Motor  
-![Dark Energy Quantum Motor](images/Captura%20de%20pantalla%202025-01-27%20215546.png)
-
 ---
 
 ## How to Use  

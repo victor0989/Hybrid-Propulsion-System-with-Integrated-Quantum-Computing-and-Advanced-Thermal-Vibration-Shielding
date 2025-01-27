@@ -71,3 +71,42 @@ Integration of electric motors and CPW resonator chips in aviation environments 
 
 Intel i9 processor needed!
 
+# Quantum Energy Propulsion System ideas
+
+## Overview  
+This second project explores a **Riemann Tensor-Based Engine** for advanced quantum energy propulsion, leveraging spacetime curvature and quantum mechanics. Inspired by black hole dynamics, the system integrates higher-dimensional interactions to generate energy for propulsion.
+
+## Key Concepts  
+1. **Riemann Tensor Structure:**  
+   Mimics spacetime curvature to manipulate geodesics for propulsion.  
+2. **Quantum Energy Sources:**  
+   Utilizes quantum fluctuations (e.g., Casimir effect, Hawking radiation) to extract energy.  
+3. **Black Hole-Inspired Dynamics:**  
+   Designs based on Kerr metrics to achieve stable spacetime distortions.  
+
+## Applications  
+- Faster-than-light propulsion.  
+- Quantum energy generation for sustainable power.  
+- Advanced exploration of spacetime and quantum phenomena.  
+
+## Visualizations  
+### Dark Energy Quantum Motor  
+![Dark Energy Quantum Motor](images/Captura%20de%20pantalla%202025-01-27%20215546.png)
+
+---
+
+## How to Use  
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/yourusername/Quantum-Energy-Propulsion.git
+
+
+pip install qiskit-metal
+
+## References
+Semiconductor-Superconductor Josephson Junctions by Christian Baumgartner.
+Riemann Tensor & General Relativity Applications.
+
+## Notes
+Integration of quantum components requires compliance with aviation documentation standards.
+For optimal performance, an Intel i9 processor or equivalent is recommended.

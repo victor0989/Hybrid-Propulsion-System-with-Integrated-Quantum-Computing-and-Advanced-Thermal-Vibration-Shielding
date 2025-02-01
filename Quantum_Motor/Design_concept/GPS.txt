@@ -1,0 +1,22 @@
+//GPS
+
+module gps_module (
+    input wire clk,               // Reloj de sistema
+    input wire gps_rx,            // GPS recepción UART
+    output reg [7:0] gps_data     // Datos GPS recibidos
+);
+
+reg [7:0] data_buffer;
+reg valid_gps_data;
+
+// Lógica para manejar la comunicación UART del GPS
+always @(posedge clk) begin
+    // Aquí pones la lógica para deserializar el dato recibido por UART y almacenar en data_buffer
+    // Esto es solo una lógica de ejemplo, necesitarás añadir tu propia deserialización
+    valid_gps_data <= 1;
+    data_buffer <= gps_rx; 
+end
+
+assign gps_data = valid_gps_data ? data_buffer : 8'h00;
+
+endmodule

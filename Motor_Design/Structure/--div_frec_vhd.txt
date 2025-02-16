@@ -1,0 +1,36 @@
+--div_frec.vhd
+-- Frequency Divider VHDL Code
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity freq_div is
+    Port ( clk        : in  STD_LOGIC;
+           reset      : in  STD_LOGIC;
+           div_factor : in  INTEGER;
+           out_clk    : out STD_LOGIC
+         );
+end freq_div;
+
+architecture Behavioral of freq_div is
+    signal counter : INTEGER := 0;
+    signal temp_clk : STD_LOGIC := '0';
+begin
+    process (clk, reset)
+    begin
+        if reset = '1' then
+            counter <= 0;
+            temp_clk <= '0';
+        elsif rising_edge(clk) then
+            if counter = div_factor - 1 then
+                counter <= 0;
+                temp_clk <= NOT temp_clk;
+            else
+                counter <= counter + 1;
+            end if;
+        end if;
+    end process;
+    
+    out_clk <= temp_clk;
+end Behavioral;

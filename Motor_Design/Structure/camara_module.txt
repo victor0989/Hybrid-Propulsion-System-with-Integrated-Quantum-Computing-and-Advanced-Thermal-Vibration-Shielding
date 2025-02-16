@@ -1,0 +1,25 @@
+//camara_module
+//cámara hay ejes centrales de movimiento x/y/z
+//visión térmica como la programo(entrada y salida de datos térmicos por infrarojos?
+
+module camera_module (
+    input wire clk,       // Reloj de sistema
+    input wire cam_data_in,  // Datos de entrada de la cámara
+    output wire cam_data_out, // Datos procesados de salida
+    input wire cam_clk,      // Reloj de la cámara
+    input wire cam_sync      // Sincronización de la cámara
+);
+
+// Lógica para procesar los datos de la cámara
+always @(posedge cam_clk) begin
+    // Procesamiento de datos de la cámara
+end
+
+endmodule
+
+//The ZCU106 provides designers a rapid prototyping platform using the 
+//XCZU7EV-2FFVC1156 device
+
+//Sensores para las baterías de los dispositivos de la tripulación a bordo
+
+

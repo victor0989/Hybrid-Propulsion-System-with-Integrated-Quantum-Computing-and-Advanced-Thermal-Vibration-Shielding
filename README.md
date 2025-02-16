@@ -75,6 +75,36 @@ Integration of electric motors and CPW resonator chips in aviation environments 
 
 Intel i9 processor needed!
 
+# Reaction Engine Overview
+
+## Part I: Thermodynamics
+- **T1** [1. Introduction to Thermodynamics]
+- **T2** [2. Fundamental Thermodynamics Equations (Compressible Flow)]
+
+## Part II: Fundamental Components of the Reaction Engine
+- **F1** [3. General Description of Reaction Engine (Engine Types)]
+- **F2** [4. Reaction Engine Operation (Thermodynamic Cycle)]
+- **F3** [5. Intake Diffusers]
+- **F4** [6. Compressors]
+- **F5** [7. Combustion Chambers]
+- **F6** [8. Turbines]
+- **F7** [9. Nozzles]
+- **F8** [10. Bearings (Accessory Gearbox)]
+
+## Part III: Auxiliary Systems of the Reaction Engine
+- **A1** [11. Engine Lubrication System]
+- **A2** [12. Engine Air System]
+- **A3** [13. Fuel System]
+- **A4** [14. Engine Starting System (Auxiliary Power Unit - APU)]
+- **A5** [15. Full Authority Digital Engine Control (FADEC)]
+- **A6** [16. Thrust Augmentation Systems]
+- **A7** [17. Engine Indication System]
+- **A8** [18. Engine Fire Suppression System]
+- **A9** [19. Variation of Engine Operating Conditions]
+- **A10** [20. Turbofan, Turboprop, and Turboshaft]
+- **A11** [21. Reaction Engine Inspection and Maintenance]
+
+
 # Quantum Energy Propulsion System ideas
 
 ## Overview  

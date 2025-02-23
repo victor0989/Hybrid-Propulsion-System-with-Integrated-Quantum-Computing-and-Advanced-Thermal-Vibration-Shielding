@@ -1,0 +1,13 @@
+[IDLE]
+   |
+   v
+[START_BIT_DETECT]
+   |
+   v
+[DATA_BIT_CAPTURE] <-- Loop for each data bit
+   |
+   v
+[STOP_BIT_DETECT]
+   |
+   v
+[DATA_AVAILABLE] --> [IDLE]

@@ -1,0 +1,399 @@
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::                                                                     ::
+::        Plasma Reactor Capture & Cryogenic Stabilization Simulation   ::
+::        Author: Victor & AI - 2025                                  ::
+::                                                                     ::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Source: What could you extract? Application:
+Outer layers of a white dwarf. Degenerate plasma. Modeling gravitational fields or curved space.
+Relativistic phenomena (local gravitational waves). Anomalies in space-time. Sources of curvature for experiments.
+Matter decay (as virtual particles). Possible access to negative point energy. Creating regions of "exotic matter" necessary for tunneling or curvature.
+
+# Assumptions:
+# - Plasma is captured from the Sun's corona.
+# - The shield protects the structure from extreme temperatures.
+# - Magnetic field will contain the plasma without touching the walls.
+# - Cryogenic systems will stabilize plasma for later use.
+# - Thermal management system (cooling systems) needed for transport.
+
+# Constants
+k_B = 1.38064852e-23    # Boltzmann constant (J/K)
+T_sun = 1.5e6           # Temperature of plasma in corona (K)
+sigma = 5.670374419e-8  # Stefan-Boltzmann constant (W/m²·K⁴)
+cryogenic_efficiency = 0.98 # Cryogenic system efficiency
+heat_transfer_coefficient = 1.5e5  # Heat transfer coefficient (W/m²·K)
+
+# Define plasma energy and radiation flux
+def plasma_energy_density(T):
+    return (3 * k_B * T) / (2 * 1.6726219e-27)  # Plasma energy density (J/m³)
+
+def radiation_flux(T):
+    return sigma * T**4  # Radiation flux (W/m²)
+
+# Plasma shielding model
+def thermal_shielding(temperature, distance_from_sun):
+    shield_efficiency = 0.98  # Efficiency of shield (99% shielding)
+    max_temp = 1500  # Maximum temperature tolerated by the shield (K)
+    
+    # Calculate temperature after passing through shield
+    shielded_temp = max(temperature - shield_efficiency * distance_from_sun, max_temp)
+    
+    return shielded_temp
+
+# Magnetic containment field model
+def magnetic_containment(energy_density, field_strength):
+    containment_efficiency = 0.95  # Magnetic containment efficiency (95%)
+    
+    # Calculate energy containment based on field strength
+    containment = energy_density * containment_efficiency * field_strength
+    
+    return containment
+
+# Cryogenic stabilization model (cooling system)
+def cryogenic_stabilization(plasma_temp, stabilization_efficiency):
+    # Assume that the cooling system can bring the temperature of plasma down by the given efficiency
+    stable_temp = plasma_temp * (1 - stabilization_efficiency)
+    
+    return stable_temp
+
+# Thermal management system (heat dissipation during transport)
+def thermal_management(energy_density, transport_distance):
+    # Calculate heat dissipation as function of distance traveled (requires specialized cooling)
+    dissipated_heat = energy_density * heat_transfer_coefficient * transport_distance
+    
+    return dissipated_heat
+
+# Simulation Parameters
+plasma_temp = T_sun  # Initial plasma temperature
+distance_to_sun = 1e6  # Distance from Sun (m)
+field_strength = 5.0  # Magnetic field strength (Tesla)
+transport_distance = 5000000  # Distance for transport (m)
+
+# Calculate initial plasma energy density
+energy_density = plasma_energy_density(plasma_temp)
+
+# Calculate radiation flux (W/m²)
+flux = radiation_flux(plasma_temp)
+
+# Apply shielding effect (adjust temperature due to shield)
+shielded_temp = thermal_shielding(plasma_temp, distance_to_sun)
+
+# Magnetic containment effect
+contained_energy = magnetic_containment(energy_density, field_strength)
+
+# Apply cryogenic stabilization (cooling effect)
+stable_plasma_temp = cryogenic_stabilization(shielded_temp, cryogenic_efficiency)
+
+# Thermal management (calculate heat dissipation during transport)
+dissipated_heat = thermal_management(energy_density, transport_distance)
+
+# Output the results
+print("Plasma Energy Density: {:.2e} J/m³".format(energy_density))
+print("Plasma Radiation Flux: {:.2e} W/m²".format(flux))
+print("Shielded Plasma Temperature: {:.2f} K".format(shielded_temp))
+print("Contained Plasma Energy: {:.2e} J (Magnetic Field Effect)".format(contained_energy))
+print("Stable Plasma Temperature (after Cryogenic Stabilization): {:.2f} K".format(stable_plasma_temp))
+print("Heat Dissipated during Transport: {:.2e} J (Cooling Effect)".format(dissipated_heat))
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+[2:13, 21/5/2025] victoralonsogarcia8: Here are the additional details about titanium and other specifications mentioned in the text:
+
+Titanium Specifications
+1. Titanium Alloy: Used for the radiation vault due to its high strength-to-weight ratio, corrosion resistance, and ability to handle launch stresses.
+2. Thickness: The titanium vault is designed to provide adequate shielding against radiation, with a thickness that provides the necessary protection.
+3. Weight: The titanium vault is designed to be lightweight while providing adequate shielding, with a weight that is optimized for the mission requirements.
+
+Radiation Shielding Specifications
+1. Radiation Reduction: The radiation vault is designed to reduce the radiation exposure to the electronics by a factor of 6.
+2. Shielding Effectiveness: The titanium vault provides a shielding effectiveness of 100 times or more against radiation.
+3. Radiation Types: The radiation vault is designed to protect against various types of radiation, including ions, electrons, and gamma rays.
+
+Spacecraft Specifications
+1. Spacecraft Mass: The Juno spacecraft has a mass of approximately 3,625 kilograms (7,992 pounds).
+2. Spacecraft Dimensions: The Juno spacecraft has a diameter of approximately 3.5 meters (11.5 feet) and a height of approximately 2.7 meters (8.9 feet).
+3. Orbit: The Juno spacecraft is in a polar orbit around Jupiter, with a periapsis of approximately 4,200 kilometers (2,600 miles) and an apoapsis of approximately 8.1 million kilometers (5.0 million miles).
+
+Electronic Components Specifications
+1. RAD750 Microprocessor: The RAD750 microprocessor is a radiation-hardened processor that provides reliable processing in high-radiation environments.
+2. Electronic Boxes: The spacecraft has at least 20 different electronic boxes, each with its own specific function and design.
+3. Power and Data Distribution: The spacecraft has a power and data distribution unit that provides power and data to the various electronic components.
+[2:15, 21/5/2025] victoralonsogarcia8: Here is the revised text in English:
+
+Radiation Vault Specifications
+1. Material: Titanium alloy (Ti-6Al-4V) for the radiation vault.
+2. Thickness: 2.5 cm (1 inch) thick to provide adequate radiation protection.
+3. Weight: 150 kg (331 pounds) to minimize weight and maximize efficiency.
+4. Radiation Reduction: The radiation vault reduces radiation exposure by a factor of 6.
+5. Shielding Effectiveness: The titanium vault provides a shielding effectiveness of 100 times or more against radiation.
+
+Black Hole Metrics
+1. Schwarzschild Mass: 2.8 x 10^30 kg (approximately 1.4 times the mass of the Sun).
+2. Schwarzschild Radius: 4.2 x 10^3 km (approximately 2.6 times the radius of the Sun).
+3. Surface Gravity: 3.1 x 10^6 m/s^2 (approximately 300,000 times Earth's gravity).
+
+Crystal Metrics
+1. Crystal Structure: Titanium alloy Ti-6Al-4V has a hexagonal close-packed crystal structure.
+2. Lattice Parameters: a = 2.95 Å, c = 4.69 Å (lattice parameters for titanium).
+3. Density: 4.5 g/cm^3 (density of titanium).
+
+Spacecraft Specifications
+1. Mass: 3625 kg (approximately 7992 pounds).
+2. Dimensions: Diameter of 3.5 meters (11.5 feet), height of 2.7 meters (8.9 feet).
+3. Orbit: Polar orbit around Jupiter, with a periapsis of approximately 4200 km (2600 miles) and an apoapsis of approximately 8.1 million km (5 million miles).
+
+Electronic Components
+1. RAD750 Processor: Radiation-hardened processor that provides reliable processing in high-radiation environments.
+2. Electronic Boxes: At least 20 different electronic boxes, each with its own specific function and design.
+3. Power and Data Distribution: Power and data distribution unit that provides power and data to the various electronic components.
+[2:25, 21/5/2025] victoralonsogarcia8: Here is the information in English:
+
+Metrics and Materials/Components
+Propulsion
+- Main Engine:
+- Type: Liquid fuel engine
+- Thrust: 400 N (90 lbf)
+- Fuel: Monomethylhydrazine and nitrogen tetroxide
+- Fuel tank: Capacity of 925 kg (2039 lb)
+- Propulsion System:
+- Mass: 150 kg (331 lb)
+- Length: 2.5 m (8.2 ft)
+- Diameter: 1.5 m (4.9 ft)
+
+Power Generation
+- Power Generators:
+- Type: Radioisotope thermoelectric generators (RTGs)
+- Power: 570 watts
+- Fuel: Plutonium-238
+- Mass: 57 kg (125 lb)
+- Batteries:
+- Type: Lithium-sulfur batteries
+- Capacity: 7.2 ampere-hours
+- Voltage: 28.05 volts
+- Mass: 13 kg (29 lb)
+
+Communications
+- High-Gain Antenna:
+- Type: Reflector antenna
+- Diameter: 4.2 m (13.8 ft)
+- Wavelength: 13 cm (5.1 in)
+- Gain: 37 dB
+- Low-Gain Antenna:
+- Type: Omnidirectional antenna
+- Wavelength: 13 cm (5.1 in)
+- Gain: 10 dB
+
+Scientific Instruments
+- Camera:
+- Type: Solid-state camera
+- Resolution: 800x800 pixels
+- Wavelength: 400-1100 nm
+- Mass: 29.7 kg (65 lb)
+- Near-Infrared Mapping Spectrometer:
+- Type: Mapping spectrometer
+- Wavelength: 0.7-5.2 micrometers
+- Resolution: 256x256 pixels
+- Mass: 18 kg (40 lb)
+
+Black Hole Metrics
+- Schwarzschild Mass:
+- Unit: kg
+- Value: 2.8 x 10^30 kg (approximately 1.4 times the mass of the Sun)
+- Schwarzschild Radius:
+- Unit: km
+- Value: 4.2 x 10^3 km (approximately 2.6 times the radius of the Sun)
+- Surface Gravity:
+- Unit: m/s^2
+- Value: 3.1 x 10^6 m/s^2 (approximately 300,000 times Earth's gravity)
+- Binding Energy:
+- Unit: J
+- Value: 2.2 x 10^41 J (approximately 100 times the energy released by the Sun in one second)
+
+Materials and Components
+- Titanium:
+- Alloy: Ti-6Al-4V
+- Properties: high strength, low density, corrosion resistance
+- Copper:
+- Properties: high electrical conductivity, high thermal conductivity
+- Plutonium-238:
+- Properties: high specific energy, long half-life
+- Lithium and Sulfur:
+- Properties: high energy density, long cycle life
+
+I hope this information is helpful! Let me know if you need anything else.
+[2:26, 21/5/2025] victoralonsogarcia8: Here is the organized text with variables and extractions:
+
+Galileo Spacecraft Subsystems
+Command and Data Handling (CDH)
+- Subsystem Type: Actively redundant with two parallel data system buses
+- Components:
+- Multiplexers (MUX)
+- High-level modules (HLM)
+- Low-level modules (LLM)
+- Power converters (PC)
+- Bulk memory (BUM)
+- Data management subsystem bulk memory (DBUM)
+- Timing chains (TC)
+- Phase locked loops (PLL)
+- Golay coders (GC)
+- Hardware command decoders (HCD)
+- Critical controllers (CRC)
+- Functions:
+- Decoding of uplink commands
+- Execution of commands and sequences
+- Execution of system-level fault-protection responses
+- Collection, processing, and formatting of telemetry data for downlink transmission
+- Movement of data between subsystems via a data system bus
+
+Propulsion
+- Subsystem Type: Propulsion module
+- Components:
+- 400 N (90 lbf) main engine
+- Twelve 10 N (2.2 lbf) thrusters
+- Propellant, storage and pressurizing tanks
+- Associated plumbing
+- Functions:
+- Propulsion for the spacecraft
+
+Electrical Power
+- Subsystem Type: Radioisotope thermoelectric generators (RTGs)
+- Components:
+- Two RTGs
+- Plutonium-238 fuel
+- Functions:
+- Generation of electricity for the spacecraft
+
+Telecommunications
+- Subsystem Type: High-gain antenna
+- Components:
+- High-gain antenna
+- Low-gain antenna
+- Functions:
+- Communication with Earth
+
+Instruments
+- Subsystem Type: Scientific instruments
+- Components:
+- Solid-state imager (SSI)
+- Near-infrared mapping spectrometer (NIMS)
+- Ultraviolet spectrometer / extreme ultraviolet spectrometer (UVS/EUV)
+- Photopolarimeter-radiometer (PPR)
+- Dust-detector subsystem (DDS)
+- Energetic-particles detector (EPD)
+- Heavy-ion counter (HIC)
+- Magnetometer (MAG)
+- Plasma subsystem (PLS)
+- Plasma-wave subsystem (PWS)
+- Functions:
+- Study of Jupiter's atmosphere, magnetosphere, and moons
+
+Deployable Structures
+Types of Deployable Structures
+- Folding: Deployable solar arrays, antennas
+- Sleeve: Deployable antennas, radiators
+- Truss: Deployable structures for large antennas, solar sails
+- Inflatable: Deployable structures for solar sails, deorbit devices
+
+Examples of Deployable Structures
+- GPX-2 CubeSat: Deployable boom for gravity gradient stabilization
+- NASA Deployable Composite Booms (DCB): High bending and torsional stiffness, packaging efficiency, thermal stability, and 25% less weight than metallic booms
+- Advanced Composite Solar Sail System (ACS3): Deployable boom technology for solar sailing applications
+
+Metrics
+Spacecraft Metrics
+- Mass: 3625 kg (approximately 7992 pounds)
+- Dimensions: Diameter of 3.5 meters (11.5 feet), height of 2.7 meters (8.9 feet)
+- Orbit: Polar orbit around Jupiter, with a periapsis of approximately 4200 km (2600 miles) and an apoapsis of approximately 8.1 million km (5 million miles)
+
+Instrument Metrics
+- Solid-state imager (SSI):
+- Mass: 29.7 kg (65 pounds)
+- Power consumption: 15 watts
+- Spectral response: 400 to 1100 nm
+- Near-infrared mapping spectrometer (NIMS):
+- Mass: 18 kg (40 pounds)
+- Power consumption: 12 watts
+- Spectral response: 0.7 to 5.2 micrometers
+
+Deployable Structure Metrics
+- GPX-2 CubeSat deployable boom:
+- Length: 2 meters (6.6 feet)
+- Mass: 4 kg (8.8 pounds)
+- NASA Deployable Composite Booms (DCB):
+- Length: up to 16.5 meters (54 feet)
+- Mass: 25% less than metallic booms
+
+
+*************************************************************************************************************************************************************************
+The isentropic efficiency of the intake is denoted by (ηd), which is static-to-total 
+efficiency and is a measure for the losses from the far upstream conditions to the 
+end of inlet (it is the fan/compressor face for turbine or shaft-based engines and the 
+inlet of combustion chamber for ram-based engines). The efficiency is then 
+expressed by the following relation (refer to Fig. 8.38):
+
+ηd = (h02s - h1) / (h02 - h1)
+    = (T02s - T1) / (T02 - T1)
+    = (T02s/T1 - 1) / (T02/T1 - 1)
+∴ ηd = (rd)^(γ−1/γ) * [ (1 + (γ−1)/2 * M1^2) / (1 + (γ−1)/2 * M1^2) ]
+
+(8.2) Stagnation pressure ratio is then expressed as
+
+rd = P02 / P01 =
+     [ 1 + ηd * (γ−1)/2 * M1^2 ]^(γ / (γ−1)) /
+     [ 1 + (γ−1)/2 * M1^2 ]^(γ / (γ−1))
+
+
+1. The working fluid (which usually consists of chemical reaction products) is 
+   homogeneous in composition.
+2. All the species of the working fluid are treated as gaseous. Any condensed 
+   phases (liquid or solid) add a negligible amount to the total mass.
+3. The working fluid obeys the perfect gas law.
+4. There is no heat transfer across any and all gas-enclosure walls; therefore, the 
+   flow is adiabatic.
+5. There is no appreciable wall friction and all boundary layer effects may be 
+   neglected.
+6. There are no shock waves or other discontinuities within the nozzle flow.
+7. The propellant flow rate is steady and constant. The expansion of the working 
+   fluid is uniform and steady, without gas pulsations or significant turbulence.
+8. Transient effects (i.e., start-up and shutdown) are of such short duration that 
+   they may be neglected.
+9. All exhaust gases leaving the rocket nozzles travel with a velocity parallel to 
+   the nozzle axis.
+10. The gas velocity, pressure, temperature, and density are all uniform across any 
+    section normal to the nozzle axis.
+11. Chemical equilibrium is established within the preceding combustion chamber 
+    and gas composition does not change in the nozzle (i.e., frozen composition 
+    flow).
+12. Ordinary propellants are stored at ambient temperatures. Cryogenic propellants 
+    are at their boiling points.
+
+
+h0 = h + v^2 / (2J) = constant
+
+Conservation of energy applied to isentropic flows between any two nozzle axial 
+sections x and y shows that the decrease in static enthalpy (or thermodynamic 
+content of the flow) appears as an increase of kinetic energy since any changes in 
+potential energy may be neglected.
+
+hx − hy = (1/2) * (vy^2 − vx^2) / J = cp * (Tx − Ty)
+
+
+Specific volume V (i.e., the volume divided by the mass within), at any section:
+
+ṁx = ṁy ≡ ṁ = A * v / V
+
+px * Vx = R * Tx
+
+T0 = T + v^2 / (2 * cp * J)   (3–8)
+
+
+Relationship of area ratio, pressure ratio, and temperature ratio as functions 
+of Mach number in a converging/diverging nozzle depicted for the subsonic and 
+supersonic nozzle regions.
+
+The nozzle area ratio for isentropic flow may now be expressed in terms of Mach 
+numbers for two arbitrary locations x and y within the nozzle. Such a relationship is 
+plotted in Fig. 3–1 for Mx = 1.0, where Ax = At the throat or minimum area, along 
+with corresponding ratios for T/T0 and p/p0. In general,
+
+Ay / Ax = (Mx / My) * sqrt{ [1 + ((k−1)/2) * My^2] / [1 + ((k−1)/2) * Mx^2] }^( (k+1)/(k−1) )

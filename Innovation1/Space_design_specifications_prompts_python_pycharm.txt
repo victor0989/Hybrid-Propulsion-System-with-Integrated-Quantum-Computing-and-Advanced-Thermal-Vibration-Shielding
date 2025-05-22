@@ -1,8 +1,7 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::                                                                     ::
 ::        Plasma Reactor Capture & Cryogenic Stabilization Simulation   ::
-::        Author: Victor & AI - 2025                                  ::
-::                                                                     ::
+::                                 ::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Source: What could you extract? Application:

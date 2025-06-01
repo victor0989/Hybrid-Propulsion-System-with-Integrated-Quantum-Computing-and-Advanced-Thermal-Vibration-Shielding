@@ -1,1 +1,20 @@
+TABLE III  
+Antenna Functions  
+
+------------------------------------------------------------  
+| Antenna Mode  | Frequency (GHz)  | Function               |  
+------------------------------------------------------------  
+| HGA          | X-band Transmit   | 7.175 ± 0.025         | Telecommunications  |  
+|              | X-band Receive    | 8.425 ± 0.025         | Telecommunications  |  
+|              | Ka-band Transmit  | 32.028 ± 0.1          | Science (RFIS)      |  
+|              | Ka-band Receive   | 34.316 ± 0.1          | Science (RFIS)      |  
+|              | Ku-band Transmit & Receive  | 13.7765 ± 0.005  | Science (RADAR)    |  
+|              | Ku-band Receive   | 13.800 ± 0.1          | Science (RADAR)     |  
+|              | S-band Transmit   | 2.298 ± 0.005         | Science (RFIS)      |  
+|              | S-band Receive    | 2.097 ± 0.005         | Probe Relay         |  
+|              | S-band Receive    | 2.118 ± 0.005         | Probe Relay         |  
+------------------------------------------------------------  
+| LGAs         | X-band Transmit   | 7.175 ± 0.025         | Telecommunications  |  
+|              | X-band Receive    | 8.425 ± 0.025         | Telecommunications  |  
+------------------------------------------------------------  
 

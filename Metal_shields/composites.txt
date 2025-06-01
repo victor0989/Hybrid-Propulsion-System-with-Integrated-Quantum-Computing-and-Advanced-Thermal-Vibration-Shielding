@@ -18,3 +18,17 @@ Antenna Functions
 |              | X-band Receive    | 8.425 ± 0.025         | Telecommunications  |  
 ------------------------------------------------------------  
 
+TABLE 8.3  
+Sine Vibration Environment for Ariane 5  
+
+-------------------------------------------------------------------  
+| Sine Frequency Range (Hz) | Qualification | Protoflight | Acceptance |  
+-------------------------------------------------------------------  
+| Longitudinal 2–5         | 12.4mm        | 12.4mm      | 9.9mm      |  
+| Longitudinal 5–50        | 1.25g         | 1.25g       | 1g         |  
+| Longitudinal 50–100      | 1g            | 1g          | 0.8g       |  
+| Lateral 2–5             | 9.9mm         | 9.9mm       | 8.0mm      |  
+| Lateral 5–25            | 1g            | 1g          | 0.8g       |  
+| Lateral 25–100          | 0.8g          | 0.8g        | 0.6g       |  
+| Sweep Rate              | 2 oct./min    | 4 oct./min  | 4 oct./min  |  
+-------------------------------------------------------------------  

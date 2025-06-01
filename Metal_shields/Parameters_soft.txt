@@ -1,0 +1,44 @@
+TABLE VIII  
+Pointing and Course Correction Parameters  
+
+-----------------------------------------------------  
+| Parameter                    | Value            |  
+-----------------------------------------------------  
+| Probe Release Pointing       | 30.2 mrad       |  
+| HGA Pointing                 | 4.0 mrad        |  
+| Probe Relay Pointing         | 3.5 mrad        |  
+| Imaging Science Pointing     | 2.0 mrad        |  
+| Radar Pointing               | 1.3 mrad        |  
+| Pointing Stability (1 sec)   | 8 microrad      |  
+| Pointing Stability (1 hour)  | 280 microrad    |  
+-----------------------------------------------------  
+
+TABLE IX  
+AACS Software Modes  
+
+-------------------------------------------------------------------  
+| Mode                            | Means of Attitude Determination |  
+-------------------------------------------------------------------  
+| Pause                           | None                           |  
+| Coast                           | IRU                            |  
+| Detumble                        | IRU                            |  
+| Find_Sun                        | IRU, SSA                       |  
+| Center_Sun                      | IRU, SSA                       |  
+| Find_Stars                      | IRU, SSA, SRU                  |  
+| Home_Base, Inertial_RCS         | IRU                            |  
+| Home_Base, Inertial_RWA         | IRU                            |  
+| Home_Base, Cruise_RCS           | IRU                            |  
+| Home_Base, Cruise_RWA           | IRU                            |  
+| ME_DeltaV                       | SRU                            |  
+| RCS_DeltaV                      | SRU                            |  
+| Idle                            | IRU                            |  
+| RCS                             | IRU                            |  
+| RCS                             | RCS                            |  
+| RCS                             | RCS                            |  
+| RCS                             | RCS                            |  
+| RCS                             | RWA                            |  
+| RCS                             | RCS                            |  
+| RWA                             | RWA                            |  
+| ME/RCS                          | RCS                            |  
+| RCS                             | RCS                            |  
+-------------------------------------------------------------------  

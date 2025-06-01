@@ -1,0 +1,135 @@
+A.V. FROLOV AND U.-L. PEN  
+PHYSICAL REVIEW D 68, 124024 (2003)  
+
+VI. CONCLUSIONS  
+
+The gravitational potential is given by:  
+
+V(r) = -2M* / r   for   r > M* / e  
+
+To simplify the argument, we assume the potential remains continuous and constant within its radius:  
+
+V(r) = e  
+
+For small values of e, the spacetime remains in the **weak field regime** everywhere to order e.  
+Taking a sequence of such spacetimes with **fixed e and decreasing M*** leads to:  
+
+- The maximal curvature R ~ e³ / M*² **increases indefinitely**  
+- An **illusory naked singularity** seems to emerge in this limit  
+
+As M* → 0, the expected limiting spacetime would be **empty Minkowski space**, but convergence is **pointwise, not uniform**.  
+In the limit:  
+
+V₀(r) = lim M* → 0 (M* / r)  
+
+The function V₀(r) converges to **zero pointwise but not uniformly**, except at **r = 0**, where it becomes **undefined**.  
+This singularity is **removable**, allowing us to define:  
+
+V₀(0) = lim r → 0 (V₀(r)) = 0  
+
+This ensures a **unique and physically valid solution**.  
+The future of the collapse should remain **regular everywhere**, with a **removable singularity** at r = 0.  
+
+### Apparent Paradox in the Penrose Diagram  
+
+- The **gauge choice** at r = 0 affects the representation of the collapse.  
+- The left panel describes **critical collapse**; the right panel shows a **gauge transformation**.  
+- Our approach differs from Martin Garcia and Gundlach, who solve an **elliptic equation** with a **self-similar ansatz**.  
+
+Our **hyperbolic initial-value approach** finds no new **Cauchy data** emerging from the singular event.  
+The qualitative solution of their **unique regular extension** resembles our **critical spacetime**.  
+
+---
+
+### Implementation of Numerical Methods  
+
+We implemented a **double-null characteristic code** to analyze the **global spacetime structure** of critical collapse.  
+Our findings:  
+
+- **Standard critical behavior** and **universal scaling** were reproduced.  
+- **Subcritical and supercritical collapse limits** appear qualitatively different.  
+- Based on simulations, we propose that both limits **converge pointwise** but **not uniformly**.  
+
+**Key observation:**  
+- The r = 0 line does **not converge**, while other points do.  
+- The two solutions differ **only by a gauge transformation**.  
+- The apparent **naked singularity** in the upper limit **becomes removable** in the final collapse state.  
+
+---
+
+### Thermodynamic & Fluid Dynamics Parameters  
+
+------------------------------------------------------  
+| Symbol  | Description                                  |  
+------------------------------------------------------  
+| R       | Gas constant (J/kg-K)                       |  
+| R'      | Universal gas constant (8314.3 J/kgmol-K)   |  
+| S       | Entropy (J/kgmol-K)                         |  
+| T       | Absolute temperature (K)                    |  
+| Tad     | Adiabatic temperature (K)                   |  
+| U       | Internal energy (J/kg-mol)                  |  
+| 𝑣       | Gas velocity (m/sec)                        |  
+| V       | Specific volume (m³/kg)                     |  
+| Xj      | Mole fraction of species j                  |  
+------------------------------------------------------  
+
+Subscripts:  
+- **a, b** → Reactant species A or B  
+- **c, d** → Product species C or D  
+- **i** → Atomic or molecular species in a specific propellant  
+- **j** → Constituent species in reactants/products  
+- **mix** → Mixture of gases  
+- **ref** → Reference condition  
+
+### Turbine Mechanics & Energy Transfer  
+
+Impulse turbines rely on **fluid stream momentum** to transfer kinetic energy to **rotating blades**.  
+The **velocity-staged impulse turbine** has stationary blades that **redirect gas flow** before entering a second rotating set.  
+
+- **Pressure-staged impulse turbines** expand gas across multiple **stationary rows of blades**.  
+- **Reaction turbines** split **gas expansion evenly** between rotating and stationary elements.  
+- **High-pressure gas drops** optimize **turbine fluid expansion efficiency**.  
+
+---
+
+### TABLE 17-3: Performance of a Typical Resistojet  
+
+------------------------------------------------------  
+| Parameter                  | Value                 |  
+------------------------------------------------------  
+| Propellant                 | Hydrazine (liquid)    |  
+| Inlet Pressure (MPa)       | 0.689 – 2.41          |  
+| Catalyst Outlet Temp (K)   | 1144                  |  
+| Resistojet Outlet Temp (K) | 1922                  |  
+| Thrust (N)                 | 0.18 – 0.33           |  
+| Flow Rate (kg/sec)         | 5.9 × 10⁻⁵ – 1.3 × 10⁻⁴ |  
+| Specific Impulse (sec)     | 280 – 304             |  
+| Heater Power (W)           | 350 – 510             |  
+| Valve Power (max) (W)      | 9                     |  
+| Thruster Mass (kg)         | 0.816                 |  
+| Total Impulse (N-sec)      | 311,000               |  
+| Number of Pulses           | 500,000               |  
+| Status                     | Operational           |  
+------------------------------------------------------  
+
+---
+
+### TABLE 17-4: On-Orbit Data for the 2-kW MR-510 Hydrazine Arcjet System  
+
+------------------------------------------------------  
+| Parameter                  | Value                 |  
+------------------------------------------------------  
+| Propellant                 | Hydrazine             |  
+| Steady Thrust (mN)         | 222 – 258             |  
+| Mass Flow Rate (mg/sec)    | 40                    |  
+| Feed Pressure (psia)       | 200 – 260             |  
+| Power Control Unit (PCU)   | 4.4 kW (2 thrusters)  |  
+| System Input Voltage (VDC) | 70                     |  
+| PCU Efficiency (%)         | 91                     |  
+| Specific Impulse (sec)     | 570 – 600              |  
+| Arcjet Dimensions (mm³)    | 237 × 125 × 91         |  
+| PCU Dimensions (mm³)       | 631 × 359 × 108        |  
+| Arcjet Mass (4 units)      | 6.3 kg                 |  
+| PCU Mass                   | 15.8 kg                |  
+| Total Impulse (N-sec)      | 1,450,900              |  
+------------------------------------------------------  
